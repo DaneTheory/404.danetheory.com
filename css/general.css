@@ -5,11 +5,12 @@ body{
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
-	position:relative;
+	position: absolute;
 	min-height:100%;
-	font-size:10px;
+	font-size: 16px;
+	color: white;
 	background-color:#000;
-	padding-bottom:77px;
+
 }
 article,aside,details,figcaption,figure,
 footer,header,hgroup,main,menu,nav,section,time{
@@ -23,13 +24,6 @@ footer,header,hgroup,main,menu,nav,section,time{
 .fullScreen{
 	height: 100%;
 	width: 100%;
-}
-ul{
-	list-style-type: none;
-}
-::selection{
-	color:#fff;
-    background: #dc3333;
 }
 .title{
 	font-family: pf_din_text_comp_proregular,sans-serif;
@@ -46,17 +40,10 @@ ul{
 #footer{
 	font-family: 'PT Sans',sans-serif;
 }
-
-/* Футер */
 #footer{
 	position:absolute;
 	bottom:0;
 	left:0;
-	z-index: 100;
-
-	width:100%;
-	height:77px;
-	text-align: center;
 	font-size:10px;
 }
 .portfolio-work #footer{
@@ -67,49 +54,6 @@ ul{
 	overflow: hidden;
 }
 
-#footer > ul{
-	height: 100%;
-	list-style-type: none;
-	margin: 0px
-}
-
-#footer a,
-#footer p{
-	font: 14px 'PT Sans';
-	padding-top:.23em;
-	margin-bottom:.23em;
-	color: white;
-}
-
-#parallax a,
-#footer a{
-	display: inline-block;
-	border-bottom:1px solid #dc3333;
-	text-decoration:none;
-}
-
-#footer a{
-	white-space:nowrap;
-	margin-left:.66em;
-	margin-right:.66em;
-	border-bottom-width:2px;
-	color:white;
-	font-size:18px;
-	text-transform:lowercase;
-}
-
-#footer a:hover{
-	margin: 0px 0px;
-	padding:.23em .66em;
-	color: white;
-	background-color: #dc3333;
-	border-color: transparent;
-
-}
-
-#footer li{
-	vertical-align:middle;
-}
 
 #footer a.blankStyle{
 	padding:0px;
@@ -120,12 +64,6 @@ ul{
 #footer a.blankStyle:hover{
 	background: transparent;
 }
-
-/* Закрашивание логотипа: прелоадер */
-/* html{
-	overflow: hidden;
-} */
-
 body.unloaded{
 	height:100%;
 	overflow: hidden;
@@ -186,7 +124,7 @@ body.unloaded{
 		display:none;
 	}
 #footer > ul > li:first-child{
-	padding-left:2em;
+	/* padding-left:2em; */
 }
 #footer > ul > .strt img{
 	border: 0px;
@@ -263,9 +201,6 @@ body.unloaded{
 	display: block;
 }
 
-
-/* Иконки в футере */
-
 #footer .icon-queen, #footer .icon-pushkin{
 	display: inline-block;
 	vertical-align:baseline;
@@ -276,9 +211,6 @@ body.unloaded{
 	line-height:0;
 }
 
-/* ------------------------------------ */
-/* 			Всплывающая карта 			*/
-/* ------------------------------------ */
 #popupMap{
 	position: fixed;
 	top:0;
@@ -367,7 +299,6 @@ body.unloaded{
 			bottom:.41em;
 		}
 
-	/* Показать/скрыть карту */
 	#popupMap .toggler{
 		position:absolute;
 		right:0;
@@ -382,7 +313,7 @@ body.unloaded{
 		-webkit-transition:-webkit-transform .3s ease 0s;
 		transition:transform .3s ease 0s;
 	}
-		/* В Opera 12.16-, если и у родителя, и у потомка есть трансформация и она идёт плавным перехоом (transition: transform), после перехода потомок не виден. Если родителя сдвигать на <100% (т.ч. его край виден), потомок виден, но не взаимодействовать с ним пользователь не может. Решаем отключая переход у потомка в Опере. */
+
 		_:-o-prefocus, body:last-child #popupMap .toggler{
 			-o-transition:none;
 			transition:none;
@@ -447,7 +378,7 @@ body.unloaded{
 		background:none;
 	}
 
-/* Логотип в подвале сайта */
+
 a.home-link{
 	background-color: #DC3333;
 	border: medium none !important;
@@ -471,10 +402,7 @@ a.home-link:hover{
 	display: inline ;
 }
 
-/* ------------------------------------ */
-/* 				Спрайт 					*/
-/* ------------------------------------ */
-/* При генерации нового спрайта, удалить весь этот блок, заменить на вновь созданный _sprite.css */
+
 .icon-close,.with-icon-close:before{
 	display:inline-block;
 	background-image: url('../images/sprite.png');
@@ -545,4 +473,3 @@ a.home-link:hover{
 .with-icon-queen:before{
 	content:"";
 }
-/* / Спрайт */
