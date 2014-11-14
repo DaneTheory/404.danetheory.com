@@ -3,7 +3,7 @@
 
 var textSize = 90;
 
-var heroString = "4 0H 4";
+var heroString = "4 ? 4";
 
 var cataloguePath = '../images/';
 
@@ -11,12 +11,12 @@ var boxSkinPath = '../images/polyBackground3.png';
 
 var gui = new function() {
 
-this.mainRGB = [210, 220, 243];
-this.sideColor = [20, 180, 240];
+this.mainRGB = [245, 50, 0];
+this.sideColor = [250, 56, 10];
 this.fourOhFour = heroString;
-this.bgColor = [15,15,15];
-this.focalColor = [0,256,0];
-this.ambientColor = [50,256,243];
+this.bgColor = [10,200,10];
+this.focalColor = [50,250,50];
+this.ambientColor = [20,255,130];
 this.hsv = {};
 this.explode = function() {
 explode =  new THREE.Vector3(15,35,15);
@@ -99,7 +99,7 @@ function setupGUI() {
 	for (var i = 0, c = colors[i]; i < colors.length; i++, c = colors[i]) {
 
 		gui.hsv[c] = rgb2hsv(gui[c][0], gui[c][1], gui[c][2]);
-		gui.hsv[c].h /= 60;
+		gui.hsv[c].h /= 360;
 		gui.hsv[c].s /= 200;
 		gui.hsv[c].v /= 100;
 
@@ -109,7 +109,7 @@ function setupGUI() {
 	function closureEscaper(c) {
 		return function(value) {
 			gui.hsv[c] = rgb2hsv(value[0], value[1], value[2]);
-			gui.hsv[c].h /= 60;
+			gui.hsv[c].h /= 360;
 			gui.hsv[c].s /= 200;
 			gui.hsv[c].v /= 100;
 		};
@@ -164,7 +164,7 @@ var lights = {
 
 		scene.add(lights.point.obj);
 
-		lights.ambient.obj = new THREE.AmbientLight(0x909090);
+		lights.ambient.obj = new THREE.AmbientLight(0x333333);
 
 		lights.update();
 

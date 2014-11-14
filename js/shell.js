@@ -1,16 +1,12 @@
-// Здесь хранятся программные структуры сцены, камеры, часть пользовательского
-// интерфейса.
-// Код, содержащийся здесь, применим к любому набору объектов на сцене.
-
 var WIDTH, HEIGHT, ASPECT;
 
-var VIEW_ANGLE = 45, NEAR = 0.1, FAR = 10000;
+var VIEW_ANGLE = 85, NEAR = 0.1, FAR = 2000;
 
-var cameraMaxA = 0.0001;
+var cameraMaxA = 0.001;
 
 var origin;
 
-var maxRadius = 150, ceiling = 400, floor = 0;
+var maxRadius = 200, ceiling = 400, floor = 0;
 
 var renderer, scene, camera, projector;
 
@@ -40,8 +36,8 @@ var smallUnshiftedCube = false;
 var skybox = canvasMode;
 var brandBackground = true,
 	oldTweenLib = false,
-	backgroundCubeMoving = false,
-	linePattern = false,
+	backgroundCubeMoving = true,
+	linePattern = true,
 	linesConstructShouldRotate = false,
 	statsEnabled = window.location.href.indexOf('perf=true') > -1,
 	guiEnabled = false,
@@ -60,9 +56,9 @@ var adaptiveCam = {
 	},
 	f : {
 		a : 0,
-		va : Math.PI / 2
+		va : Math.PI / 3
 	},
-	delta : .01
+	delta : .005
 };
 
 var axises = ['x', 'y', 'z'];
@@ -109,7 +105,7 @@ function init() {
 
 	});
 
-	origin = new THREE.Vector3(0, 0, 0)
+	origin = new THREE.Vector3(10, 80, 10)
 
 	if(canvasMode){
 		renderer = new THREE.CanvasRenderer();
@@ -201,9 +197,21 @@ function init() {
 
 function applyCamAngles() {
 
+
+
 	camera.position.x = Math.sin(camera.a) * Math.sin(camera.va) * ceiling;
-	camera.position.y = Math.cos(camera.a) * Math.sin(camera.va) * ceiling;
+	camera.position.y = Math.cos(camera.a) * Math.sin(camera.va) * ceiling * 1.5;
 	camera.position.z = Math.cos(camera.va) * ceiling;
+
+
+
+
+	if (camera.position.z = 0) camera.position.z = 0;
+
+				camera.position.copy ( camera.position );
+
+    if (camera.position.z < -1000) camera.position.z = -1000;
+
 	camera.lookAt(origin);
 }
 
@@ -216,8 +224,17 @@ function update() {
 
 	updateObjects();
 
+
+
+
+
+
+
 	camera.a += (adaptiveCam.f.a - camera.a) * adaptiveCam.delta;
 	camera.va += (adaptiveCam.f.va - camera.va) * adaptiveCam.delta;
+
+
+
 	applyCamAngles();
 
 	if (statsEnabled)
