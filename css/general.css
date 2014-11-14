@@ -1,0 +1,548 @@
+html{
+	height: 100%;
+}
+body{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	position:relative;
+	min-height:100%;
+	font-size:10px;
+	background-color:#000;
+	padding-bottom:77px;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,main,menu,nav,section,time{
+    display:block;
+}
+#container {
+	position:relative;
+	min-height:100%;
+}
+
+.fullScreen{
+	height: 100%;
+	width: 100%;
+}
+ul{
+	list-style-type: none;
+}
+::selection{
+	color:#fff;
+    background: #dc3333;
+}
+.title{
+	font-family: pf_din_text_comp_proregular,sans-serif;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+#footer,
+.title{
+	color: white;
+}
+
+#parallax,
+#footer{
+	font-family: 'PT Sans',sans-serif;
+}
+
+/* Футер */
+#footer{
+	position:absolute;
+	bottom:0;
+	left:0;
+	z-index: 100;
+
+	width:100%;
+	height:77px;
+	text-align: center;
+	font-size:10px;
+}
+.portfolio-work #footer{
+	display:none;
+}
+
+#footer > .aligner{
+	overflow: hidden;
+}
+
+#footer > ul{
+	height: 100%;
+	list-style-type: none;
+	margin: 0px
+}
+
+#footer a,
+#footer p{
+	font: 14px 'PT Sans';
+	padding-top:.23em;
+	margin-bottom:.23em;
+	color: white;
+}
+
+#parallax a,
+#footer a{
+	display: inline-block;
+	border-bottom:1px solid #dc3333;
+	text-decoration:none;
+}
+
+#footer a{
+	white-space:nowrap;
+	margin-left:.66em;
+	margin-right:.66em;
+	border-bottom-width:2px;
+	color:white;
+	font-size:18px;
+	text-transform:lowercase;
+}
+
+#footer a:hover{
+	margin: 0px 0px;
+	padding:.23em .66em;
+	color: white;
+	background-color: #dc3333;
+	border-color: transparent;
+
+}
+
+#footer li{
+	vertical-align:middle;
+}
+
+#footer a.blankStyle{
+	padding:0px;
+	margin:0px;
+	border: 0px;
+}
+
+#footer a.blankStyle:hover{
+	background: transparent;
+}
+
+/* Закрашивание логотипа: прелоадер */
+/* html{
+	overflow: hidden;
+} */
+
+body.unloaded{
+	height:100%;
+	overflow: hidden;
+}
+
+.loadBackground,
+.preloaderCont {
+	position: absolute;
+	top: 0px;
+	right:0;
+	bottom:0;
+	left: 0px;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+}
+.loadBackground{
+	z-index:1;
+	background-color: black;
+	display: block;
+}
+
+.preloaderCont {
+
+	background: rgba(0,0,0,.3);
+
+}
+
+.preloaderCont .ending,
+.preloaderCont .starting {
+	width: 0px;
+}
+
+.preloaderCont img {
+	width: 200px;
+	height: 51px;
+}
+.preloaderCont .ending,
+.preloaderCont .starting {
+	overflow: hidden;
+	display: inline-block;
+	top:0px;
+}
+
+.preloaderCont .starting > *{
+	float: right;
+}
+.preloaderCont .ending > *{
+	float: left;
+}
+
+/* Логотип */
+#footer > ul .strt{
+	vertical-align:middle;
+	height:100%;
+}
+	.index-page #footer .strt{
+		display:none;
+	}
+#footer > ul > li:first-child{
+	padding-left:2em;
+}
+#footer > ul > .strt img{
+	border: 0px;
+	width: 143px;
+	height: 37px;
+	cursor: pointer;
+}
+#footer > ul > li:last-child{
+	padding-right: 2em;
+}
+
+#footer .location a{
+	position: relative;
+}
+
+/* Переключатель языков */
+
+#footer .languageSwitch{
+	height: 100%;
+	width: 68px;
+}
+#footer .languageSwitch form{
+    height: 100%;
+}
+#footer .languageSwitch .a{
+	border-bottom: none;
+	margin: 0;
+	padding:0;
+	position: relative;
+}
+#footer .languageSwitch .a:after{
+	content:'';
+	height: 100%;
+	width: 0px;
+	background: yellow;
+	display: inline-block;
+}
+#footer .languageSwitch .a .caption{
+	text-transform:uppercase;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	font: 28px/99px pf_din_text_comp_proregular;
+
+}
+#footer .languageSwitch .shadow{
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	text-align: center;
+}
+#footer .languageSwitch .centered{
+	display: inline-block;
+	width: 0px;
+	height: 100%;
+	position: relative;
+}
+#footer .languageSwitch .a:hover{
+	background: transparent;
+	border-bottom: none;
+	margin:0px;;
+}
+#footer .languageSwitch .megaChild{
+	display: none;
+	position: absolute;
+	text-align: center;
+	height: 100%;
+	top: 0px;
+	width: 120px;
+	left: -60px;
+}
+#footer .languageSwitch .a.hover .megaChild{
+	display: block;
+}
+
+
+/* Иконки в футере */
+
+#footer .icon-queen, #footer .icon-pushkin{
+	display: inline-block;
+	vertical-align:baseline;
+	border:none;
+	padding:0px;
+	margin:0px;
+	background-color: transparent;
+	line-height:0;
+}
+
+/* ------------------------------------ */
+/* 			Всплывающая карта 			*/
+/* ------------------------------------ */
+#popupMap{
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0 !important;
+	z-index:1000;
+
+	font-size:10px;
+	display:none;
+}
+/* --- Блок с адресом и контактами --- */
+#popupMap .info-block{
+	position:absolute;
+	top:0;
+	z-index:10;
+
+	-moz-transition:-moz-transform .3s ease 0s;
+	-o-transition:-o-transform .3s ease 0s;
+	-webkit-transition:-webkit-transform .3s ease 0s;
+	transition:transform .3s ease 0s;
+
+	display:table;
+	height: 50%;
+	width: 100%;
+	background-color: #131313;
+
+	font-family:pf_din_text_comp_proregular,sans-serif;
+	font-size:2.6em;
+	text-align: center;
+	line-height:1.2;
+}
+	#popupMap .info-block>div{
+		display:table-cell;
+		vertical-align:middle;
+	}
+	#popupMap .icon-close{
+		position:absolute;
+		top:34px;
+		right:34px;
+		z-index:20;
+
+		background-color:#131313;
+		cursor:pointer;
+	}
+	#popupMap .info-block p, #popupMap .info-block a{
+		font-size:inherit;
+	}
+	#popupMap .info-block p{
+		padding:0;
+		margin:0 .5em .85em;
+	}
+	#popupMap .info-block a{
+		text-transform:none;
+		border-width:1px;
+	}
+	#popupMap .info-block .address{
+		margin-top:2.7em;
+	}
+	/* Ссылка на Яндекс-карту */
+	#popupMap .info-block .yandex-link{
+		position:relative;
+		border:none;
+		font-size:.616em;
+	}
+	#popupMap .info-block .yandex-link .link-text{
+		margin-left:1.3em;
+		border-bottom:1px solid #dc3333;
+	}
+		#popupMap .info-block .yandex-link .icon-map-link,
+		#popupMap .info-block .yandex-link .icon-map-link-hover{
+			position:absolute;
+			bottom:.1875em;
+			left:-0.25em;
+		}
+		#popupMap .info-block .yandex-link:hover .icon-map-link,
+		#popupMap .info-block .yandex-link .icon-map-link-hover{
+			display:none;
+		}
+		#popupMap .info-block .yandex-link .icon-map-link,
+		#popupMap .info-block .yandex-link:hover .icon-map-link-hover{
+			display:block;
+		}
+		#popupMap .info-block .yandex-link:hover .icon-map-link-hover{
+			left:.42em;
+			bottom:.41em;
+		}
+
+	/* Показать/скрыть карту */
+	#popupMap .toggler{
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:90px;
+		height:90px;
+		background-color:#131313;
+		cursor:pointer;
+
+		-moz-transition:-moz-transform .3s ease 0s;
+		-o-transition:-o-transform .3s ease 0s;
+		-webkit-transition:-webkit-transform .3s ease 0s;
+		transition:transform .3s ease 0s;
+	}
+		/* В Opera 12.16-, если и у родителя, и у потомка есть трансформация и она идёт плавным перехоом (transition: transform), после перехода потомок не виден. Если родителя сдвигать на <100% (т.ч. его край виден), потомок виден, но не взаимодействовать с ним пользователь не может. Решаем отключая переход у потомка в Опере. */
+		_:-o-prefocus, body:last-child #popupMap .toggler{
+			-o-transition:none;
+			transition:none;
+		}
+		#popupMap .toggler .icon-map-hide,#popupMap .toggler .icon-map-show{
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-7.5px 0 0 -14px;
+		}
+		#popupMap .toggler .icon-map-show{
+			display:none;
+		}
+	/* Закрытый инфо-блок */
+	.ie8minus #popupMap .info-block.slid{
+		/* Хак для ie8 */
+		top:-50%;
+	}
+	#popupMap .info-block.slid{
+		/* Для более новых браузеров */
+		-moz-transform:translateY(-100%);
+		-ms-transform:translateY(-100%);
+		-webkit-transform:translateY(-100%);
+		transform:translateY(-100%);
+	}
+		.ie8minus #popupMap .info-block.slid .toggler{
+			top:100%;
+			bottom:auto;
+		}
+		#popupMap .info-block.slid .toggler{
+			-moz-transform:translateY(99%);
+			-ms-transform:translateY(99%);
+			-o-transform:translateY(99%);
+			-webkit-transform:translateY(99%);
+			transform:translateY(99%);
+		}
+		#popupMap .info-block.slid .toggler .icon-map-hide{
+			display:none;
+		}
+		#popupMap .info-block.slid .toggler .icon-map-show{
+			display:block;
+		}
+
+	/* --- Карта --- */
+	#htdt-map{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:5;
+
+		background-color:#f07373;
+	}
+	#htdt-map .gm-style-cc span, #htdt-map .gm-style-cc a, #htdt-map .gm-style-mtc div{
+		font-size:10px;
+		margin:0;
+		padding:0;
+		border:none;
+	}
+	#htdt-map a:hover{
+		background:none;
+	}
+
+/* Логотип в подвале сайта */
+a.home-link{
+	background-color: #DC3333;
+	border: medium none !important;
+	border-radius: 100%;
+	display: block;
+	height: 23px;
+	margin: 0 0 0 10px !important;
+	padding: 0 !important;
+	vertical-align: inherit;
+	width: 23px;
+	-webkit-transition:-webkit-transform .5s;
+	transition:transform .5s;
+}
+a.home-link:hover{
+    border-radius: 0%;
+	-webkit-transform:scale(1.2);
+	transform:scale(1.2);
+}
+
+#priceB a.html5{
+	display: inline ;
+}
+
+/* ------------------------------------ */
+/* 				Спрайт 					*/
+/* ------------------------------------ */
+/* При генерации нового спрайта, удалить весь этот блок, заменить на вновь созданный _sprite.css */
+.icon-close,.with-icon-close:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 32px;
+	height: 31px;
+	background-position:0px -69px;
+}
+.with-icon-close:before{
+	content:"";
+}
+.icon-map-hide,.with-icon-map-hide:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 28px;
+	height: 15px;
+	background-position:-34px -69px;
+}
+.with-icon-map-hide:before{
+	content:"";
+}
+.icon-map-link-hover,.with-icon-map-link-hover:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 15px;
+	height: 12px;
+	background-position:-94px -69px;
+}
+.with-icon-map-link-hover:before{
+	content:"";
+}
+.icon-map-link,.with-icon-map-link:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 15px;
+	height: 12px;
+	background-position:-111px -69px;
+}
+.with-icon-map-link:before{
+	content:"";
+}
+.icon-map-show,.with-icon-map-show:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 28px;
+	height: 15px;
+	background-position:-64px -69px;
+}
+.with-icon-map-show:before{
+	content:"";
+}
+.icon-pushkin,.with-icon-pushkin:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 67px;
+	height: 65px;
+	background-position:-70px 0px;
+}
+.with-icon-pushkin:before{
+	content:"";
+}
+.icon-queen,.with-icon-queen:before{
+	display:inline-block;
+	background-image: url('../images/sprite.png');
+	width: 68px;
+	height: 67px;
+	background-position:0px 0px;
+}
+.with-icon-queen:before{
+	content:"";
+}
+/* / Спрайт */
