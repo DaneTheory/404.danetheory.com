@@ -221,6 +221,7 @@ nav.cl-effect-6 {
 div#mainText {
     position: absolute;
     display: block;
+    font-family: 'sketch_blockbold';
     z-index: 1;
     bottom: 25%;
     font-size: .5em;
@@ -291,7 +292,7 @@ a {
 	position: absolute;
 	z-index: 100;
 
-	background-image: url('../images/arrow.png');
+	/* background-image: url('../images/arrow.png'); */
 
 	-webkit-transition: opacity 0.4s ease 0.4s;
 	   -moz-transition: opacity 0.4s ease 0.4s;
@@ -300,56 +301,21 @@ a {
 	        transition: opacity 0.4s ease 0.4s;
 }
 .meny-left .meny-arrow {
-    left: .2em;
+    left: 0;
     top: 50%;
-    height: 45px;
+    height: 4em;
     display: list-item;
     position: absolute;
-    width: 45px;
+    width: 60px;
     background-image: url("../images/arrow.png");
     background-repeat: no-repeat;
-    background-position: center;
-    opacity: .65;
-}
-.meny-left .meny-arrow::before {
-    content: "";
-    text-decoration: none;
-    list-style: none;
-    left: .73em;
-    top: .43em;
-    height: 30px;
-    display: list-item;
-    position: absolute;
-    width: 45px;
-    background-image: url("../images/arrow.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: .45;
-}
-.meny-left .meny-arrow::after {
-    content: "Menu";
-    font-size:1.5em;
-    color:white;
-    border-bottom: 3px solid #ec0004;
-    padding-left: .8em;
-    text-shadow: 1px 1px 1px black;
-    font-variant: small-caps;
-    text-decoration: none;
-    list-style: none;
-    left: 1.5em;
-    top: 0.5em;
-    height: 20px;
-    display: list-item;
-    position: absolute;
-    background-image: url("../images/arrow.png");
-    background-repeat: no-repeat;
-    background-position-x: -20px;
-    background-position-y: -22px;
-    opacity: 1;
+    background-position-x: 0px;
+    /* opacity: .65; */
+    background-position-y: 0px;
+    opacity: .9;
 }
 
-
-	.meny-active .meny-arrow {
+.meny-active .meny-arrow {
 		opacity: 0;
 
 		-webkit-transition: opacity 0.2s ease;
@@ -395,12 +361,22 @@ a {
 	}
 /**
 *** END DEFAULT MENU STYLES***/
+.meny-arrow h1 {
+    font-family: 'jaapokkisubtract-regular';
+    font-variant: small-caps;
+    /* border-bottom: 3px solid white; */
+    /* border-left: 3px solid white; */
+    display: inline-block;
+    line-height: 0.75em;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    margin-left: 0.55em;
+    position: relative;
+}
 
 
-.aligner {
-	/* text-align: justify; */
-	/* line-height: 0px; */
-	/* font-size: 5%; */}
 .aligner > * {
 	/* display: inline-block; */
 	/* vertical-align: top; */
