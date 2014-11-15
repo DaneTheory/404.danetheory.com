@@ -3,7 +3,7 @@
 
 var textSize = 90;
 
-var heroString = "4 ? 4";
+var heroString = "4 OH 4";
 
 var cataloguePath = '../images/';
 
